@@ -6,11 +6,11 @@ const app = express();
 
 mongoose.set("strictQuery", false);
 
-const PORT = express.PORT || 4000;
+const PORT = process.env.PORT || 4000;
 
 app.use(Router);
 
-app.listen(PORT, () => console.log("app has sarted"));
+app.listen(PORT, () => console.log("app has started at: ", PORT));
 
 //const Router = require("./routes")
 
